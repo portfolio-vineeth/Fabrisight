@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FabriSight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f6f8fa;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #e0eafc, #cfdef3);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #0056b3;
+    }
+
+    .section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 800px;
+    }
+
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Centered Logo Only -->
+  <header>
+    <img src="/Users/gurunanmapurushotam/Documents/fabriSight/Logo.png" alt="FabriSight Logo" style="height: 500px; object-fit: contain;">
+  </header>
+
+  <section class="hero">
+    <h1>Your Factory’s Smartest Observer</h1>
+    <p>Turn every machine into a storyteller. Let FabriSight uncover the hidden narrative of your manufacturing line.</p>
+    <button>Request a Demo</button>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About FabriSight</h2>
+    <p>FabriSight uses AI and computer vision to automate manufacturing documentation, detect anomalies, and offer predictive diagnostics — all from a simple plug-and-play system.</p>
+
+    <!-- Video -->
+    <div style="margin-top: 40px; height: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+      <video controls style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+        <source src="/Users/gurunanmapurushotam/Documents/fabriSight/Fabrsight Demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- PDF -->
+    <div style="margin-top: 30px; height: 600px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+      <iframe src="/Users/gurunanmapurushotam/Documents/fabriSight/Documentation generted.pdf#toolbar=0&navpanes=0&scrollbar=1" 
+              width="100%" 
+              height="100%" 
+              style="border: none;">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <h2>Key Features</h2>
+    <p>Real-time data capture, compliance automation, and insights generation. FabriSight makes complex shop floor processes transparent and manageable.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email us at: hello@fabrisight.ai</p>
+  </section>
+
+  <footer>
+    &copy; 2025 FabriSight. All rights reserved.
+  </footer>
+
+  <script>
+    // JavaScript for interactive behavior if needed later
+    document.querySelector("button").addEventListener("click", function() {
+      alert("Demo request submitted! We'll be in touch soon.");
+    });
+  </script>
+</body>
+</html>
