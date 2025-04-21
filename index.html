@@ -9,10 +9,12 @@
     :root {
       --primary-color: #007bff;
       --primary-hover: #0056b3;
-      --bg-light: #f6f8fa;
+      --bg-light: #ffffff;
       --text-dark: #111;
       --text-muted: #444;
       --max-width: 1100px;
+      --fabri-color: #eeb35a;
+      --sight-color: #efe8ae;
     }
     * {
       box-sizing: border-box;
@@ -37,11 +39,10 @@
       align-items: center;
       min-height: 200px;
       padding: 20px 40px;
-      background: linear-gradient(145deg, #e0eafc, #cfdef3);
+      background: #fff;
       border-radius: 12px;
       margin: 40px 20px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      text-align: left;
     }
     .hero-content {
       flex: 1;
@@ -74,11 +75,12 @@
       transform: translateY(-2px);
     }
     .hero-logo img {
-      height: 120px;
+      height: 450px;
       width: auto;
     }
     .section {
       padding: 80px 20px;
+      background: #fff;
     }
     .section h2 {
       font-size: clamp(1.8rem, 3vw, 2.5rem);
@@ -89,8 +91,11 @@
       font-size: clamp(1rem, 2vw, 1.1rem);
       color: var(--text-muted);
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 20px;
       text-align: center;
+    }
+    .section strong {
+      color: var(--text-dark);
     }
     .about-me ul {
       list-style: disc inside;
@@ -106,11 +111,13 @@
     }
     .media-grid iframe {
       width: 100%;
-      aspect-ratio: 16/9;
+      height: 600px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border: none;
     }
+    .fabri { color: var(--fabri-color); }
+    .sight { color: var(--sight-color); }
     footer {
       background: #fff;
       text-align: center;
@@ -119,6 +126,32 @@
       color: #777;
       border-top: 1px solid #ddd;
     }
+    .features-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 20px auto 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.features-list .icon {
+  min-width: 24px;
+  height: 24px;
+  color: var(--fabri-color); /* or any other highlight color */
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.features-list strong {
+  color: var(--text-dark);
+}
+
+
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -134,8 +167,8 @@
 <body>
   <section class="hero">
     <div class="hero-content">
-      <h1>Your Factory’s Smartest Observer</h1>
-      <p>Turn every machine into a storyteller. Let FabriSight uncover the hidden narrative of your manufacturing line.</p>
+      <h1><span class="fabri">Fabri</span><span class="sight">Sight</span>: Visual Intelligence for Smarter Semiconductor Manufacturing.</h1>
+      <!-- <p>FabriSight ("Fabri" for semiconductor fabs, "Sight" for intelligent vision) transforms your fab equipment into sharp-eyed observers—automatically capturing, analyzing, and narrating every critical process step. Our AI-powered platform preserves tribal knowledge, uncovers inefficiencies, and keeps your fab running faster, smarter, and more reliably.</p> -->
       <button>Request a Demo</button>
     </div>
     <div class="hero-logo">
@@ -143,12 +176,12 @@
     </div>
   </section>
 
-
-
   <section class="section" id="about">
     <div class="container">
-      <h2>About FabriSight</h2>
-      <p>FabriSight uses AI and computer vision to automate manufacturing documentation, detect anomalies, and offer predictive diagnostics — all from a simple plug-and-play system.</p>
+      <h2>🧠 <span class="fabri">Fabri</span><span class="sight">Sight</span> is giving semiconductor fabs a <strong>memory</strong>.</h2>
+      <p><strong>Not just machines—but the people who run them.</strong></p>
+      <p>Every <strong>motion</strong>, <strong>tool change</strong>, and <strong>spoken word</strong>—captured through 👓 <strong>smart glasses</strong>, analyzed by 🤖 <strong>AI</strong>, and turned into <strong>step-by-step documentation</strong>.</p>
+      <p>It <strong>sees what your experts see</strong>, <strong>learns from their work</strong>, and builds a <strong>permanent knowledge base</strong>. 🎥 <strong>Video</strong>, 🎙️ <strong>audio</strong>, and ⚙️ <strong>real-time actions</strong> become structured <strong>process narratives</strong>, ensuring <strong>no tribal knowledge ever walks out the door</strong>.</p>
       <div class="media-grid">
         <iframe src="https://www.youtube.com/embed/beel0QrYsrc" allowfullscreen></iframe>
         <iframe src="./Doc.pdf#toolbar=0&navpanes=0&scrollbar=1"></iframe>
@@ -159,30 +192,54 @@
   <section class="section" id="features">
     <div class="container">
       <h2>Key Features</h2>
-      <p>Real-time data capture, compliance automation, and insights generation. FabriSight makes complex shop floor processes transparent and manageable.</p>
-    </div>
-  </section>
-
-    <section class="section" id="about-me">
-    <div class="container about-me">
-      <h2>About Me</h2>
-      <p><strong>Vineeth Parashivamurthy</strong> is the Founder &amp; CEO of FabriSight, leveraging deep expertise in semiconductor manufacturing and AI-driven process documentation. He leads the development of real-time Best Known Methods (BKM) generation platforms.</p>
-      <ul>
-        <li>Meta-Documentation: Real-Time Process Capture and Automated BKM Generation in Semiconductor Manufacturing</li>
-        <li>Pioneering frame-by-frame image captioning and audio integration</li>
-        <li>Led teams in AI-powered manufacturing insights and knowledge transfer</li>
+      <p> "Fabri" for semiconductor fabs, "Sight" for intelligent vision -  transforms your fab equipment into sharp-eyed observers—automatically capturing, analyzing, and narrating every critical process step. Our AI-powered platform preserves tribal knowledge, uncovers inefficiencies, and keeps your fab running faster, smarter, and more reliably.</p>
+      <ul class="features-list">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M4 17h16M4 13h16M4 9h16M4 5h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <strong>Reduced Tool Downtime:</strong> Identify issues faster with real-time diagnostics and visual logs.
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <strong>Lower Engineering Costs:</strong> Automate documentation and reduce manual troubleshooting time.
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <strong>Faster Process Ramps:</strong> Standardize and scale best practices across tools and teams.
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M3 3h18v18H3V3z" stroke="currentColor" stroke-width="2"/>
+            <path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <strong>Data-Driven Decisions:</strong> Gain insights from structured process narratives and rich metadata.
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <strong>Knowledge Retention:</strong> Preserve expert know-how and avoid repetitive training cycles.
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <strong>Improved Operational Efficiency:</strong> Capture every motion, tool change, and verbal step with zero interruption.
+        </li>
       </ul>
     </div>
   </section>
 
-  <section class="section" id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Email us at: <a href="mailto:hello@fabrisight.ai">hello@fabrisight.ai</a></p>
-    </div>
-  </section>
   
 
-  <footer>&copy; 2025 FabriSight. All rights reserved.</footer>
+
+
+  <footer>&copy; 2025 <span class="fabri">Fabri</span><span class="sight">Sight</span>. All rights reserved.</footer>
 </body>
 </html>
